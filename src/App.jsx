@@ -1,34 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Foods from './components/foods/Foods'
+import Banner from './components/Banner/Banner'
+import Header from './components/Header'
+import Slider from './components/foods/Slider/Slider'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
-   <div class="navbar bg-base-100">
-  <div class="flex-1">
-    <a class="btn btn-ghost text-xl">daisyUI</a>
-  </div>
-  <div class="flex-none">
-    <ul class="menu menu-horizontal px-1">
-      <li><a>Link</a></li>
-      <li>
-        <details>
-          <summary>
-            Parent
-          </summary>
-          <ul class="p-2 bg-base-100 rounded-t-none">
-            <li><a>Link 1</a></li>
-            <li><a>Link 2</a></li>
-          </ul>
-        </details>
-      </li>
-    </ul>
-  </div>
-</div>
+     <Header></Header>
+     <Banner></Banner>
+     <div className='flex'>
+      <Foods></Foods>
+      <Slider></Slider>
+     </div>
     
     </>
   )
