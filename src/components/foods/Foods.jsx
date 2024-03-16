@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Food from "./Food/Food";
 import { useEffect } from "react";
-const Foods = () => {
+const Foods = ({CookHandle}) => {
     const [food,setFood]=useState([])
     useEffect(()=>{
          fetch('cafe.json')
@@ -14,7 +14,8 @@ const Foods = () => {
            {
             food.map((fd,l)=> <Food 
             key={l}
-            Foods={fd}></Food>)
+            Foods={fd}
+            CookHandle={CookHandle}></Food>)
            }
         </div>
     );
